@@ -272,3 +272,10 @@
 // }
 
 // console.log(myFunction(8));  // Logs the result of 4 * 2, which is 8
+
+
+
+
+let text1 = "What a very ";
+text1 += "nice day";
+console.log(text10);
