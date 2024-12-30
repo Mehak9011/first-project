@@ -1,0 +1,220 @@
+o<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1260px;
+}
+div#calculator {
+    text-align: center;
+}
+    button.btn {
+    padding: 20px 20px;
+    margin-bottom: 14px;
+}
+input#result {
+    margin-bottom: 20px;
+}
+input#result {
+    margin-bottom: 20px;
+    padding: 15px 21px;
+} */
+
+
+
+
+
+
+#calculator {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    width: 213px;
+}
+
+        /* Style for buttons */
+        .btn {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            margin: 5px;
+        }
+
+        /* Styling for the input field */
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <!-- Button to show the calculator -->
+    <button onclick="openCalculator()">Try it</button>
+
+    <!-- Hidden calculator initially -->
+    <div id="calculator">
+        <input type="text" id="result" readonly style="width: 100%; padding: 10px;">
+        <br>
+        <button class="btn" onclick="display('1')">1</button>
+        <button class="btn" onclick="display('2')">2</button>
+        <button class="btn" onclick="display('3')">3</button>
+        <button class="btn operator" onclick="display('+')">+</button>
+        <br>
+        <button class="btn" onclick="display('4')">4</button>
+        <button class="btn" onclick="display('5')">5</button>
+        <button class="btn" onclick="display('6')">6</button>
+        <button class="btn operator" onclick="display('-')">-</button>
+        <br>
+        <button class="btn" onclick="display('7')">7</button>
+        <button class="btn" onclick="display('8')">8</button>
+        <button class="btn" onclick="display('9')">9</button>
+        <button class="btn operator" onclick="display('*')">*</button>
+        <br>
+        <button class="btn" onclick="clearResult()">C</button>
+        <button class="btn" onclick="display('0')">0</button>
+        <button class="btn equals" onclick="calculate()">=</button>
+        <button class="btn operator" onclick="display('/')">/</button>
+    </div>
+
+
+
+    <!-- <div class="container">
+
+    <div id="calculator">
+        <input type="text" id="result" readonly>
+        <br>
+        <button class="btn" onclick="display('1')">1</button>
+        <button class="btn" onclick="display('2')">2</button>
+        <button class="btn" onclick="display('3')">3</button>
+        <button class="btn operator" onclick="display('+')">+</button>
+        <br >
+        <button class="btn" onclick="display('4')">4</button>
+        <button class="btn" onclick="display('5')">5</button>
+        <button class="btn" onclick="display('6')">6</button>
+        <button class="btn operator" onclick="display('-')">-</button>
+        <br>
+        <button class="btn" onclick="display('7')">7</button>
+        <button class="btn" onclick="display('8')">8</button>
+        <button class="btn" onclick="display('9')">9</button>
+        <button class="btn operator" onclick="display('*')">*</button>
+        <br>
+        <button class="btn" onclick="clearResult()">C</button>
+        <button class="btn" onclick="display('0')">0</button>
+        <button class="btn equals" onclick="calculate()">=</button>
+        <button class="btn operator" onclick="display('/')">/</button>
+        <br>
+        <button class="btn delete" onclick="deleteLast()">DEL</button>
+    </div>
+
+</div> -->
+
+</body>
+<script src="css.js"></script>
+<script>
+
+      
+//    // Function to display value
+//    function display(val) {
+//     document.getElementById("result").value += val;
+// }
+
+// // Function to evaluate the expression and return result
+// function calculate() {
+//     try {
+//         let input = document.getElementById("result").value;
+//         let result = eval(input); // Evaluate the input string
+//         document.getElementById("result").value = result;
+//     } catch (e) {
+//         document.getElementById("result").value = "Error";
+//     }
+// }
+
+// // Function to clear the display
+// function clearResult() {
+//     document.getElementById("result").value = "";
+// }
+
+// // Function to handle keyboard input
+// function handleKeyboard(event) {
+//     const key = event.key;
+
+//     // Check for numbers, operators, or Enter/Backspace keys
+//     switch (key) {
+//         case "0":
+//         case "1":
+//         case "2":
+//         case "3":
+//         case "4":
+//         case "5":
+//         case "6":
+//         case "7":
+//         case "8":
+//         case "9":
+//         case "+":
+//         case "-":
+//         case "*":
+//         case "/":
+//         case ".":
+//             display(key);
+//             break;
+//         case "Enter":
+//             calculate();
+//             break;
+//         case "Backspace":
+//             const currentValue = document.getElementById("result").value;
+//             document.getElementById("result").value = currentValue.slice(0, -1);
+//             break;
+//         default:
+//             break; // Ignore other keys
+//     }
+// }
+
+// function deleteLast() {
+//     const resultField = document.getElementById("result");
+//     resultField.value = resultField.value.slice(0, -1); // Remove the last character
+// }
+
+
+// Function to open the calculator when the button is clicked
+// function openCalculator() {
+//             document.getElementById("calculator").style.display = "block";
+//         }
+
+//         // Function to update the result display
+//         function display(val) {
+//             document.getElementById("result").value += val;
+//         }
+
+//         // Function to clear the result display
+//         function clearResult() {
+//             document.getElementById("result").value = "";
+//         }
+
+//         // Function to calculate the result
+//         function calculate() {
+//             let resultField = document.getElementById("result");
+//             try {
+//                 resultField.value = eval(resultField.value);
+//             } catch (error) {
+//                 resultField.value = "Error";
+//             }
+//         }
+</script>
+</html>
